@@ -143,6 +143,7 @@ function MovieList() {
         >
           <option value="title">Title (A-Z)</option>
           <option value="year">Release Date (Newest First)</option>
+          <option value="genre">Genre </option>
         </select>
       </div>
 
@@ -161,7 +162,7 @@ function MovieList() {
             {sortedMovies.map((movie) => (
               <div 
                 key={movie.imdbID} 
-                className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                className="bg-gray-300 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
                 <img
                   src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/150"}
                   alt={movie.Title}
@@ -198,6 +199,7 @@ function MovieList() {
           </div>
 
           {/* Pagination Controls */}
+          {movies.length > 0 && (
           <div className="flex justify-center mt-6">
             <button
               onClick={handlePrevPage}
@@ -213,6 +215,7 @@ function MovieList() {
               Next
             </button>
           </div>
+          )}
         </>
       )}
     </div>

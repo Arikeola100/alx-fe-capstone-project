@@ -16,7 +16,7 @@ function App() {
         <Navbar /> {/* Navbar at the top */}
         
         <Routes>
-          {/* Home route would contain both MovieList and Homepage */}
+          {/* Home route contains both MovieList and Homepage */}
           <Route 
             path="/" 
             element={

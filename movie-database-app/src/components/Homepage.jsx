@@ -49,7 +49,7 @@ function Homepage() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {movies.map((movie) => (
-            <div key={movie.imdbID} className="bg-white p-4 rounded shadow-md">
+            <div key={movie.imdbID} className="bg-gray-300 p-4 rounded shadow-md">
               <img
                 src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/150"}
                 alt={movie.Title}

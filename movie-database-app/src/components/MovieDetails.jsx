@@ -3,11 +3,11 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
 function MovieDetails() {
-  const { id } = useParams(); // Get the movie ID from the URL
+  const { id } = useParams(); 
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState("");
 
-  const apiKey = "f764c18a";
+  const apiKey = import.meta.env.VITE_OMDB_API_KEY;
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -34,7 +34,7 @@ function MovieDetails() {
   }, [id]);
   
   return (
-    <div className="container mx-auto p-4">
+    <div className="bg-gray-300 container mx-auto p-4">
       {error && <p className="text-red-500 text-center">{error}</p>}
       {movie ? (
         <div className="bg-white p-6 rounded shadow-md">

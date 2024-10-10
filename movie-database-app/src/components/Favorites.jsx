@@ -36,7 +36,7 @@ function Favorites() {
         <>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {favorites.map((movie) => (
-              <div key={movie.imdbID} className="bg-white p-4 rounded shadow-md">
+              <div key={movie.imdbID} className="bg-gray-300 p-4 rounded shadow-md hover:shadow-2xl transition duration-300 transform hover:scale-105">
                 <img
                   src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/150"}
                   alt={movie.Title}

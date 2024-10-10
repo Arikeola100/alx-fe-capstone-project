@@ -5,7 +5,7 @@ const Body = () => {
     <div className="container mx-auto p-4">
   <h2 className="text-3xl font-bold mb-6">Trending Movies</h2>
   <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    {/* Simulated trending movies data */}
+    {/* trending movies data */}
     {trendingMovies.map((movie) => (
       <div
         key={movie.id}
